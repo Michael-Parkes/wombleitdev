@@ -8,7 +8,7 @@ import { Link } from 'expo-router';
 const Page = () => {
     const [assets] = useAssets([require('@/assets/videos/IntroVideoWomble.mp4')]);
     return (
-        <View style={styles.containter}>
+        <View style={styles.container}>
             {assets && 
                 <Video 
                 resizeMode={ResizeMode.COVER}
@@ -39,7 +39,7 @@ const Page = () => {
 };
 
 const styles = StyleSheet.create({
-    containter:{
+    container:{
         flex: 1,
         justifyContent: 'space-between',
     },

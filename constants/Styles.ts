@@ -18,6 +18,13 @@ export const defaultStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  smallPillButton:{
+    padding: 10,
+    height: 60,
+    borderRadius: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   textLink: {
     color: Colors.primary,
     fontSize: 18,

@@ -45,4 +45,4 @@ function RootLayoutNav() {
         <Stack.Screen name="signup" options={{ headerShown: false }} />
       </Stack>
   );
-}
+};
