@@ -13,10 +13,12 @@ export const defaultStyles = StyleSheet.create({
   },
   pillButton: {
     padding: 10,
+    flex: 1,
     height: 60,
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: Colors.wombleGreen,
   },
   smallPillButton:{
     padding: 10,

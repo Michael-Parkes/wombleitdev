@@ -13,14 +13,17 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mikeparkes.wombleit",
+      "googleServiceFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.mikeparkes.wombleit"
+      "package": "com.mikeparkes.wombleit",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "bundler": "metro",
@@ -29,7 +32,14 @@
     },
     "plugins": [
       "expo-router",
-      "expo-asset"
+      "expo-asset",
+      ["expo-build-properties",{
+        "ios": {
+          "useFramework": "static"
+        }
+      }],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
     ],
     "experiments": {
       "typedRoutes": true

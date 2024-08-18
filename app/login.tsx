@@ -1,65 +1,73 @@
-import { View, Text, StyleSheet, ActivityIndicator, Button, KeyboardAvoidingView } from 'react-native';
-import React, { useState } from 'react';
-import { FIREBASE_AUTH } from '@/FirebaseConfig';
-import { TextInput } from 'react-native-gesture-handler';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { defaultStyles } from '@/constants/Styles';
+import { useState } from 'react';
+import { View, Text, StyleSheet, KeyboardAvoidingView, Button, TextInput, ActivityIndicator, TouchableOpacity} from 'react-native';
+import auth from '@react-native-firebase/auth';
+import {FirebaseError} from 'firebase/app';
+import { Link } from 'expo-router';
 
-const Login = () => {
-   const [email, setEmail] = useState(''); 
-   const [password, setPassword] = useState('');
-   const [loading, setLoading] = useState(false);
-   const auth = FIREBASE_AUTH;
+export default function Page () {
+const [email, setEmail] = useState('');
+const [password, setPassword] = useState('');
+const [loading, setLoading] = useState(false);
 
-   const signIn = async () =>{
+const logIn = async () => {
     setLoading(true);
     try{
-        const response = await signInWithEmailAndPassword(auth, email, password);
-        console.log(response);
-        } catch (error: any) {
-            console.log(error);
-            alert('Sing in Failed!: ' + error.message);
-        } finally {
-            setLoading(false);
-        }
+        await auth().signInWithEmailAndPassword(email, password);
+    } catch (e: any){
+        const err = e as FirebaseError;
+        alert('Sign in failed:' + err.message);
+    } finally {
+        setLoading(false);
     }
-
-    const signUp = async () => {
-        setLoading(true);
-        try{
-            const response = await createUserWithEmailAndPassword(auth, email, password);
-            console.log(response);
-            alert('Check your emails!');
-        } catch (error: any) {
-            console.log(error);
-            alert('Sing in failed:' + error.message);
-        } finally {
-            setLoading(false);
-        }
-    }
-   return (
-    <View style={styles.container}>
-        <KeyboardAvoidingView behavior='padding'>
-        <TextInput value={email} style={styles.input} placeholder="Email" onChangeText={(text) => setEmail(email)}></TextInput>
-        <TextInput secureTextEntry={true} value={password} style={styles.input} placeholder="Password" onChangeText={(text) => setPassword(password)}></TextInput>  
-    
-        {loading ? (
-            <ActivityIndicator size="large" color="#0000ff" />
-        ) : (
-            <>
-            <Button title="Login" onPress={signIn} />
-            <Button title="Sign Up" onPress={signUp} />     
-            
-            </>
-        )}
-        </KeyboardAvoidingView>
-    </View>
-   );
 };
 
-export default Login;
+const signUp = async () => {
+    setLoading(true);
+    try{
+        await auth().createUserWithEmailAndPassword(email, password);
+        alert('Check your email');
+    } catch (e: any){
+        const err = e as FirebaseError;
+        alert('Registration failed' + err.message);
+    } finally{
+        setLoading(false);
+    }
+};
+
+    return (
+       <View style={styles.container}>
+        <KeyboardAvoidingView behavior="padding">
+            <TextInput
+                style={styles.input}
+                value={email}
+                onChangeText={setEmail}
+                autoCapitalize='none'
+                keyboardType='email-address'
+                placeholder='Email'
+                />
+            <TextInput
+                style={styles.input}
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry
+                placeholder='Password'
+            />
+        {loading ? (
+          <ActivityIndicator size={'small'} style={{ margin: 28 }} />
+        ) : (
+          <>
+            <Button onPress={logIn} title="Login" />
+            <Button onPress={signUp} title="Create account" />
+          </>
+        )}
+        </KeyboardAvoidingView>
+       </View>
+    );
+}
 
 const styles = StyleSheet.create({
-    container: {
+    container:{
         marginHorizontal: 20,
         flex: 1,
         justifyContent: 'center',
@@ -71,5 +79,12 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         padding: 10,
         backgroundColor: '#fff',
+    },
+    buttons: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        gap: 20,
+        marginBottom: 60,
+        paddingHorizontal: 20,
     },
 });

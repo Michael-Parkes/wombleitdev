@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1071673681070",
+    "project_id": "wombleit-20323",
+    "storage_bucket": "wombleit-20323.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071673681070:android:f7c5a50aaabc75dec8393f",
+        "android_client_info": {
+          "package_name": "com.mikeparkes.wombleit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071673681070-hsoml9v6rac6k4a72pmb5ja2v4mcpg7c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mikeparkes.wombleit",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "1071673681070-udvahth0s9eurvlr1n8aelf8jtbrq3rh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG6-z7PxbPGMxAod5zytjIwZ5kOEPvxIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071673681070-f8j8pvfbtsahttafqjofnntn9crlcel0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1071673681070-2a0hh0q81t42akdqtfc6htjnmnaaec32.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Wombleit"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
