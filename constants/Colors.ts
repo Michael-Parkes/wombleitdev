@@ -7,4 +7,5 @@ export default {
   lightGray: '#D8DCE2',
   wombleGreen: '#78C634',
   wombleGrey: '#737373',
+  offWhite: '#FAF9F6',
 };

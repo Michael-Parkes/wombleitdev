@@ -1,9 +1,9 @@
 import { defaultStyles } from '@/constants/Styles';
 import { useState } from 'react';
-import { View, Text, StyleSheet, KeyboardAvoidingView, Button, TextInput, ActivityIndicator, TouchableOpacity} from 'react-native';
+import { View, StyleSheet, KeyboardAvoidingView, Button, TextInput, ActivityIndicator } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import {FirebaseError} from 'firebase/app';
-import { Link } from 'expo-router';
+import Colors from '@/constants/Colors';
 
 export default function Page () {
 const [email, setEmail] = useState('');
@@ -35,9 +35,10 @@ const signUp = async () => {
     }
 };
 
+
     return (
        <View style={styles.container}>
-        <KeyboardAvoidingView behavior="padding">
+        <KeyboardAvoidingView>
             <TextInput
                 style={styles.input}
                 value={email}
@@ -57,8 +58,20 @@ const signUp = async () => {
           <ActivityIndicator size={'small'} style={{ margin: 28 }} />
         ) : (
           <>
-            <Button onPress={logIn} title="Login" />
-            <Button onPress={signUp} title="Create account" />
+        <View style={[defaultStyles.smallPillButton]}>
+            <Button 
+                onPress={signUp} 
+                title="Create account" 
+                />
+        </View>
+        <View style={[defaultStyles.smallPillButton]}>
+            <Button 
+                onPress={logIn}
+                title="Login"
+                color="#78C634"
+                
+                />
+        </View>
           </>
         )}
         </KeyboardAvoidingView>
@@ -71,6 +84,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         flex: 1,
         justifyContent: 'center',
+        backgroundColor: Colors.offWhite,
     },
     input: {
         marginVertical: 4,
@@ -79,12 +93,5 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         padding: 10,
         backgroundColor: '#fff',
-    },
-    buttons: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        gap: 20,
-        marginBottom: 60,
-        paddingHorizontal: 20,
     },
 });

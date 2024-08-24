@@ -22,7 +22,11 @@ export const defaultStyles = StyleSheet.create({
   },
   smallPillButton:{
     padding: 10,
+    flexDirection: 'column',
     height: 60,
+    gap: 20,
+    marginTop: 20,
+    backgroundColor: Colors.wombleGreen,
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
