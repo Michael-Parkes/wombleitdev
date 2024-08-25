@@ -3,7 +3,7 @@ export const getDishById = (id: number) => {
   return meals.find((meal) => meal.id === id);
 };
 export const suppliers = {
-  name: 'Vapiano',
+  name: 'Ventol',
   rating: '4.5 Excellent',
   ratings: '(500+)',
   img: require('@/assets/data/r1.jpeg'),

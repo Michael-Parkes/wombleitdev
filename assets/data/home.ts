@@ -27,7 +27,7 @@ export const categories = [
 
 export const suppliers = [
   {
-    name: 'Vapiano',
+    name: 'Ventol',
     rating: '4.5 Excellent',
     ratings: '(500+)',
     distance: '0.7 miles away',
@@ -36,7 +36,7 @@ export const suppliers = [
     duration: '35 - 45',
   },
   {
-    name: '✨Urban Greens✨',
+    name: 'Ventol',
     id: '2',
     rating: '4.9 Excellent',
     ratings: '(500+)',
@@ -46,7 +46,7 @@ export const suppliers = [
     duration: '15 - 30',
   },
   {
-    name: 'El Minero',
+    name: 'Ventol',
     id: '3',
     rating: '4.5 Excellent',
     ratings: '(500+)',
