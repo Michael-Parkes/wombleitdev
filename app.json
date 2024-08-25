@@ -15,7 +15,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.mikeparkes.wombleit",
-      "googleServiceFile": "./GoogleService-Info.plist"
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
@@ -35,7 +35,7 @@
       "expo-asset",
       ["expo-build-properties",{
         "ios": {
-          "useFramework": "static"
+          "useFrameworks": "static"
         }
       }],
       "@react-native-firebase/app",
