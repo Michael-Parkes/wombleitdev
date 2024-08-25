@@ -61,15 +61,15 @@ const signUp = async () => {
         <View style={[defaultStyles.smallPillButton]}>
             <Button 
                 onPress={signUp} 
-                title="Create account" 
+                title="Create account"
+                color= '#fff'
                 />
         </View>
         <View style={[defaultStyles.smallPillButton]}>
             <Button 
                 onPress={logIn}
                 title="Login"
-                color="#78C634"
-                
+                color= '#fff'
                 />
         </View>
           </>
