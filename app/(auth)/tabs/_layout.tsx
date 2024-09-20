@@ -2,6 +2,7 @@ import {  Tabs } from 'expo-router';
 import Colors from '@/constants/Colors';
 import { FontAwesome } from '@expo/vector-icons';
 import { View, Text } from 'react-native'
+import CustomHeader from '@/components/CustomHeader';
 const Layout = () => {
   return (
     <Tabs screenOptions={{
@@ -12,6 +13,7 @@ const Layout = () => {
         options={{ title: 'Home', tabBarIcon: ({ size, color }) => (
           <FontAwesome name="home" size={size} color={color} />
         ),
+        header: () => <CustomHeader />,
       }}
       />
       <Tabs.Screen
@@ -37,8 +39,8 @@ const Layout = () => {
       />
       <Tabs.Screen
         name="account"
-        options={{ title: 'Account', tabBarIcon: ({ size, color }) => (
-          <FontAwesome name="user-circle" size={size} color={color} />
+        options={{ title: 'Basket', tabBarIcon: ({ size, color }) => (
+          <FontAwesome name="cart-plus" size={size} color={color} />
         ),
       }}
       />

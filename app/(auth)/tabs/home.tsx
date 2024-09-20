@@ -5,15 +5,22 @@ import { defaultStyles } from '@/constants/Styles';
 import Categories from '@/components/Categories';
 import Suppliers from '@/components/Suppliers';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useHeaderHeight } from '@react-navigation/elements';
 
 const Page = () => {
   const user = auth().currentUser;
+  const headerHeight = useHeaderHeight();
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+      <ScrollView style={{backgroundColor: Colors.background}}
+      contentContainerStyle={{
+        paddingTop: headerHeight,
+      }}>
       <Text style={styles.header}> Placeholder Categories Text </Text>
-        <Categories/>
+        <Categories/>        
+        <Text style={styles.header}> Placeholder Featured Suppliers Text </Text>
+        <Suppliers />
         <Text style={styles.header}> Placeholder Suppliers Text </Text>
         <Suppliers />
         <View>
