@@ -7,11 +7,12 @@ import Suppliers from '@/components/Suppliers';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useHeaderHeight } from '@react-navigation/elements';
 
-const Page = () => {
+const Inbox = () => {
   const user = auth().currentUser;
   const headerHeight = useHeaderHeight();
 
   return (
+
     <SafeAreaView style={styles.container}>
       <ScrollView style={{backgroundColor: Colors.background}}
       contentContainerStyle={{
@@ -33,4 +34,4 @@ const styles = StyleSheet.create({
     color: Colors.offWhite,
   },
   });
-export default Page;
+export default Inbox;
