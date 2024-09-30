@@ -18,7 +18,7 @@ const Page = () => {
   
       }}>
       </ScrollView>
-      </SafeAreaView>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

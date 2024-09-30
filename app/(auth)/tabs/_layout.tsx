@@ -38,6 +38,7 @@ const Layout = () => {
         options={{ title: 'Inbox', tabBarIcon: ({ size, color }) => (
           <FontAwesome name="inbox" size={size} color={color} />
         ),
+        header: () => <CustomHeader />,
       }}
       />
       <Tabs.Screen
