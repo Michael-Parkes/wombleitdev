@@ -15,31 +15,28 @@ const Page = () => {
     <SafeAreaView style={styles.container}>
       <ScrollView style={{backgroundColor: Colors.background}}
       contentContainerStyle={{
-        paddingTop: headerHeight,
+  
       }}>
-      <Text style={styles.header}> Placeholder Categories Text </Text>
+      <Text style={styles.header}> Categories </Text>
         <Categories/>        
-        <Text style={styles.header}> Placeholder Featured Suppliers Text </Text>
+        <Text style={styles.header}> Featured Suppliers </Text>
         <Suppliers />
-        <Text style={styles.header}> Placeholder Suppliers Text </Text>
+        <Text style={styles.header}> Suppliers</Text>
         <Suppliers />
-        <View>
-            <Button title="Sign out" onPress={() => auth().signOut()} />
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    top: 30,
     backgroundColor: Colors.background,
   },
   header: {
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
     paddingHorizontal: 16,
+    color: Colors.offWhite,
   },
   });
 export default Page;

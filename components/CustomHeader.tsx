@@ -8,7 +8,7 @@ const CustomHeader = () => {
     return (
             <View style={styles.container}>
                 <TouchableOpacity style={styles.roundBtn}>
-                    <Text style={{ color: '#fff', fontWeight: '500', fontSize: 16}}>MP</Text>
+                    <Text style={{ color: Colors.background, fontWeight: '500', fontSize: 16}}>MP</Text>
                 </TouchableOpacity>
                 <View style={styles.searchSection}>
                     <Ionicons style={styles.searchIcon} name="search" size={20} color={Colors.dark}/>
@@ -26,6 +26,7 @@ container: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: Colors.background,
     gap: 10,
     paddingHorizontal: 20,
     paddingTop: 80,
@@ -34,7 +35,7 @@ roundBtn: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: Colors.lightGray,
+    backgroundColor: Colors.wombleGreen,
     justifyContent: 'center',
     alignItems: 'center',
 },

@@ -2,12 +2,14 @@ import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity} from 'reac
 import React from 'react';
 import { suppliers } from '@/assets/data/home';
 import { Link } from 'expo-router';
+import Colors from '@/constants/Colors';
 
 
 const Suppliers = () => {
     return (
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{
-            padding: 15,
+            paddingLeft: 10,
+            paddingBottom: 10,
         }}>
             {suppliers.map((suppliers, index) => (
                 <Link href={'/'} key ={index} asChild>
@@ -27,23 +29,19 @@ const Suppliers = () => {
 
 const styles = StyleSheet.create({
     categoryCard: {
-        width: 300,
+        width: 250,
         height: 250,
-        backgroundColor: '#fff',
+        backgroundColor: Colors.background,
         marginEnd: 10,
         elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 4,
-        },
-        shadowOpacity: 0.06,
+        paddingLeft:10,
         borderRadius: 4,
     },
     categoryText: {
         padding: 5,
-        fontSize: 14,
-        fontWeight: 'bold',
+        fontSize: 18,
+        fontWeight: 'semibold',
+        color: Colors.offWhite,
     },
     imageContainer: { },
     image: {

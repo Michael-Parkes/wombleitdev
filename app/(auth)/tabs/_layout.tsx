@@ -7,6 +7,8 @@ const Layout = () => {
   return (
     <Tabs screenOptions={{
       tabBarActiveTintColor: Colors.wombleGreen,
+      tabBarInactiveBackgroundColor: Colors.background,
+      tabBarActiveBackgroundColor: Colors.background,
     }}>
       <Tabs.Screen
         name="home"
@@ -21,6 +23,7 @@ const Layout = () => {
         options={{ title: 'Search', tabBarIcon: ({ size, color }) => (
           <FontAwesome name="search" size={size} color={color} />
         ),
+        header: () => <CustomHeader />,
       }}
       />
       <Tabs.Screen
@@ -39,8 +42,8 @@ const Layout = () => {
       />
       <Tabs.Screen
         name="account"
-        options={{ title: 'Basket', tabBarIcon: ({ size, color }) => (
-          <FontAwesome name="cart-plus" size={size} color={color} />
+        options={{ title: 'Profile', tabBarIcon: ({ size, color }) => (
+          <FontAwesome name="user" size={size} color={color} />
         ),
       }}
       />

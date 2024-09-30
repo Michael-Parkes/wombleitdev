@@ -4,11 +4,14 @@ import Colors from '@/constants/Colors';
 import { categories } from '@/assets/data/home';
 
 
-const Categories = () => {
+const CategoriesSearch = () => {
     return (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{
+
+        <ScrollView showsHorizontalScrollIndicator={false} contentContainerStyle={{
             paddingLeft: 15,
             paddingBottom: 30,
+            gap: 8,
+            backgroundColor: Colors.background,
         }}>
             {categories.map((category, index) => (
                 <View style={styles.smallPillButton} key={index}>
@@ -27,14 +30,13 @@ const styles = StyleSheet.create({
         color: Colors.offWhite,
     },
     smallPillButton:{
-        flexDirection: 'row',
+        flexDirection: 'column',
         minHeight: 35,
         minWidth: 80,
         marginRight: 10,
         borderRadius: 40,
         backgroundColor: Colors.wombleGreen,
-        justifyContent: 'center',
-        alignItems: 'center',}
+        justifyContent: 'center',}
 });
 
-export default Categories;
+export default CategoriesSearch;

@@ -23,6 +23,38 @@ export const categories = [
     text: 'Product 6',
     img: require('@/assets/data/c6.png'),
   },
+  {
+    text: 'Product 7',
+    img: require('@/assets/data/c6.png'),
+  },
+  {
+    text: 'Product 8',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 9',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 10',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 11',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 12',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 13',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 14',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 15',
+    img: require('@/assets/data/c6.png'),
+  },  {
+    text: 'Product 16',
+    img: require('@/assets/data/c6.png'),
+  },
 ];
 
 export const suppliers = [
@@ -31,27 +63,27 @@ export const suppliers = [
     rating: '4.5 Excellent',
     ratings: '(500+)',
     distance: '0.7 miles away',
-    img: require('@/assets/data/r1.jpeg'),
+    img: require('@/assets/data/VentolLogo.png'),
     tags: ['Italian', 'Pizza', 'Pasta', 'Salads'],
     duration: '35 - 45',
   },
   {
-    name: 'Ventol',
+    name: 'Edmondsons Electrical',
     id: '2',
     rating: '4.9 Excellent',
     ratings: '(500+)',
     distance: '1.7 miles away',
-    img: require('@/assets/data/r2.jpeg'),
+    img: require('@/assets/data/EdmundsonElectricalLogo.jpg'),
     tags: ['Salads', 'Vegan', 'Healthy', 'British'],
     duration: '15 - 30',
   },
   {
-    name: 'Ventol',
+    name: 'Smith Brothers',
     id: '3',
     rating: '4.5 Excellent',
     ratings: '(500+)',
     distance: '3 miles away',
-    img: require('@/assets/data/r3.jpeg'),
+    img: require('@/assets/data/SmithBrothersLogo.png'),
     tags: ['Spanish', 'Salads', 'Tpas', 'Pasta'],
     duration: '25 - 45',
   },
