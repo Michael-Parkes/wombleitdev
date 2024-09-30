@@ -8,7 +8,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useHeaderHeight } from '@react-navigation/elements';
 import CategoriesSearch from '@/components/CategoriesSearch';
 
-const Page = () => {
+const Search = () => {
   const user = auth().currentUser;
   const headerHeight = useHeaderHeight();
 
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     color: Colors.offWhite,
   },
   });
-export default Page;
+export default Search;

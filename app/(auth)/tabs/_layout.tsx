@@ -8,7 +8,7 @@ const Layout = () => {
     <Tabs screenOptions={{
       tabBarActiveTintColor: Colors.wombleGreen,
       tabBarInactiveBackgroundColor: Colors.background,
-      tabBarActiveBackgroundColor: Colors.background,
+      tabBarActiveBackgroundColor: Colors.background
     }}>
       <Tabs.Screen
         name="home"

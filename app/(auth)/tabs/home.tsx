@@ -7,7 +7,7 @@ import Suppliers from '@/components/Suppliers';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useHeaderHeight } from '@react-navigation/elements';
 
-const Page = () => {
+const Home = () => {
   const user = auth().currentUser;
   const headerHeight = useHeaderHeight();
 
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
     color: Colors.offWhite,
   },
   });
-export default Page;
+export default Home;

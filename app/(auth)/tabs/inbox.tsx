@@ -10,7 +10,7 @@ import { useHeaderHeight } from '@react-navigation/elements';
 const Inbox = () => {
   const user = auth().currentUser;
   const headerHeight = useHeaderHeight();
-
+  
   return (
 
     <SafeAreaView style={styles.container}>

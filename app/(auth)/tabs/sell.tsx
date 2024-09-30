@@ -1,7 +1,7 @@
 import { View, Text, Button } from 'react-native';
 import auth from '@react-native-firebase/auth';
 
-const Page = () => {
+const Sell = () => {
   const user = auth().currentUser;
 
   return (
@@ -11,4 +11,4 @@ const Page = () => {
     </View>
   );
 };
-export default Page;
+export default Sell;
