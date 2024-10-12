@@ -1,6 +1,8 @@
+import { ListItemType } from "@/constants/constants";
+
 export const categories = [
   {
-    text: 'Dishwasher',
+    text: ListItemType.dishwasher,
     img: require('@/assets/data/c1.png'),
   },
   {

@@ -1,9 +1,6 @@
-import { View, Text, Button, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, ScrollView, StyleSheet } from 'react-native';
 import Colors from '@/constants/Colors';
 import auth from '@react-native-firebase/auth';
-import { defaultStyles } from '@/constants/Styles';
-import Categories from '@/components/Categories';
-import Suppliers from '@/components/Suppliers';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useHeaderHeight } from '@react-navigation/elements';
 import CategoriesSearch from '@/components/CategoriesSearch';
